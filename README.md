@@ -1,4 +1,4 @@
-# azure-event-hubs-kafka-example
+# Azure Event Hubs Kafka Example
 
 This is a minimal example using Spring Boot and Spring Kafka to connect to Azure Event Hubs via the Kafka protocol.
 
