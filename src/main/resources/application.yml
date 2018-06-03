@@ -1,0 +1,19 @@
+event-hubs-connection-string: "Endpoint=sb://sth-event-hubs.servicebus.windows.net/;SharedAccessKeyName=sth-policy;SharedAccessKey=xxx"
+event-hubs-fqdn: "sth-event-hubs.servicebus.windows.net"
+
+spring:
+  kafka:
+    bootstrap-servers: ${event-hubs-fqdn}:9093
+    properties:
+      sasl.mechanism: PLAIN
+      sasl.jaas.config: 'org.apache.kafka.common.security.plain.PlainLoginModule required username="$ConnectionString" password="${event-hubs-connection-string}";'
+      security.protocol: SASL_SSL
+
+logging:
+  level:
+    org.apache.kafka: INFO
+
+
+
+
+
