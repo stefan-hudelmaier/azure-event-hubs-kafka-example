@@ -23,5 +23,4 @@ curl http://127.0.0.1:8080/send-message
 ```
 
 Since the application listens for messages on `test-topic` you
-should see the messages in the log.
-
+should see the messages in the log. Note that it can take a couple of seconds for the application to subscribe.
